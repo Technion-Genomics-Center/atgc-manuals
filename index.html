@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ManualDesk</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314302E'/%3E%3Cpath d='M9 8h10l4 4v12H9z' fill='%23F7F6F1'/%3E%3Cpath d='M12 15h8M12 19h8' stroke='%231F7A63' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-mode="web" data-src="catalog.json">
+<header class="bar">
+  <div class="brand">ManualDesk</div>
+  <input id="q" type="search" placeholder="Kit, cat no, CG000…" autocomplete="off">
+  <div class="chips" id="chips">
+    <button data-f="bench">Bench</button>
+    <button data-f="user">User</button>
+    <button data-f="qiacube">QIAcube</button>
+    <button data-f="index">Index</button>
+    <button data-f="archived">Archived</button>
+  </div>
+  <div class="actions">
+    <button class="act upd" data-panel="updates">Updates <b id="n-upd">0</b></button>
+    <button class="act mis" data-panel="missing">Missing <b id="n-mis">0</b></button>
+    <button class="act his" data-panel="history">History</button>
+    
+  </div>
+</header>
+<div class="shell">
+  <nav id="nav"></nav>
+  <main id="main"><p class="empty">…</p></main>
+  <aside id="panel" hidden></aside>
+</div>
+<div id="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
